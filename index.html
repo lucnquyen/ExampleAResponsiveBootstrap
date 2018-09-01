@@ -9,10 +9,72 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #5E4485;
+      color: #FFF; /*color for text*/
+      padding: 1% 0; /*làm thanh bar tràn ra, bao hết chữ*/
+      font-size: 1.2em; /*tăng size của các link chữ*/
+      border: 0;
+    } 
 
+    .navbar-brand {
+      float: left;  
+      min-height: 55px; /*chiều cao tối thiểu*/
+      padding: 0 15px 15px; /*trên dưới =0, trái = phải = 15px*/
+    }
+
+    .navbar-inverse .navbar-nav .active a,  .navbar-inverse .navbar-nav .active a:focus,
+    .navbar-inverse .navbar-nav .active a:hover {
+      color: #FFF;
+      background-color: #5E4485;
+    }
+    .navbar-inverse  .navbar-nav li a {
+      color: #D5D5D5;  /*màu cho text trong link a*/
+    }
+    
   </style>
 </head>
 <body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!--Tiêu đề thanh điều hướng-->
+      <div class="navbar-header">
+        <!--Tạo btn hiển thị nhanh chóng bên trái - truyền tải dữ liệu-->
+        <!--Collapse : giúp thu gọm các phần tử , show and hide content-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-targer="#myNavbar">
+          <!--Tạo icon biểu tượng-->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--Tạo một liên kết cho hình ảnh newbie đầu trang-->
+        <a class="navbar-brand" href="#" ><img src="img/w3newbie.png" alt="newbie image"></a>
+      </div>
+
+      <!--Danh sách các mục không có thứ tự link giới thiệu-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">  <!--Đưa thanh giới thiệu sáng bên phải-->
+          <li class="active"><a href="#">Home</a></li>
+          <li ><a href="#">About</a></li>
+          <li ><a href="#">Services</a></li>
+          <li ><a href="#">Testimonials</a></li>
+          <li ><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Slide Image-->
+  <div id="myCarousel" class="carousel slide" data-right="carousel">
+    <ol class="carousel-indicators">
+      
+    </ol>
+  </div> <!--Ending slide-->
+
 
 </body>
 </html>
